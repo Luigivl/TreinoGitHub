@@ -1,0 +1,26 @@
+<h1>Todas as Tasks</h1>
+{{#each lista}}
+<div id="lista">
+   <div id="teste">
+   
+<h3>Titulo: {{this.title}}</h3>
+
+<form action="/task/done" method="post">
+   <input type="hidden" name="id" id="id" value="{{this.id}}">
+   <input type="hidden" name="done" id="done" value="{{this.done}}">
+   <button type="submit" >Trocar de done</button>
+</form>
+
+<form action="/tasks/edit/{{this.id}}" method="get">
+ <button type="submit" >editar</button>
+ </form>
+
+ <form action="/tasks/remove" method="post">
+    <input type="hidden" name="id" id="id" value="{{this.id}}">
+<button type="submit">excluir</button>
+</form>
+
+
+</div>
+
+{{/each}}

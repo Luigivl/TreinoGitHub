@@ -1,0 +1,14 @@
+h1 {
+  color: aqua;
+  text-align: center;
+}
+form {
+  text-align: center;
+}
+div {
+  padding: 2px;
+}
+#teste {
+  display: flex;
+  flex-direction: row;
+}
